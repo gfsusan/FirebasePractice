@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A505BCB207B499A00EB007F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A505BCA207B499A00EB007F /* LoginViewController.swift */; };
 		7A9EC4602047BA460037C6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC45F2047BA460037C6BE /* AppDelegate.swift */; };
 		7A9EC4652047BA460037C6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9EC4632047BA460037C6BE /* Main.storyboard */; };
 		7A9EC4672047BA460037C6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A9EC4662047BA460037C6BE /* Assets.xcassets */; };
@@ -14,12 +15,7 @@
 		7A9EC48E2047BCB30037C6BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A9EC48D2047BCB30037C6BE /* GoogleService-Info.plist */; };
 		7A9EC4902047C6DE0037C6BE /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC48F2047C6DE0037C6BE /* FirebaseDataService.swift */; };
 		7A9EC4922047CABB0037C6BE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC4912047CABB0037C6BE /* Model.swift */; };
-		7A9EC4942047CC320037C6BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC4932047CC320037C6BE /* SignInViewController.swift */; };
-		7A9EC4962047CE2A0037C6BE /* ChatGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC4952047CE2A0037C6BE /* ChatGroupViewController.swift */; };
-		7A9EC4982047D5DF0037C6BE /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC4972047D5DF0037C6BE /* UserListViewController.swift */; };
-		7A9EC49A2047D63D0037C6BE /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC4992047D63D0037C6BE /* ChatRoomViewController.swift */; };
 		7A9EC49C2047E2020037C6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC49B2047E2020037C6BE /* ViewController.swift */; };
-		7A9EC49E2047E64F0037C6BE /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9EC49D2047E64F0037C6BE /* ChatMessageCell.swift */; };
 		9F48F553350BD3E63893C0CC /* Pods_FirebasePratice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08593A92A794F5F3C1D0D29 /* Pods_FirebasePratice.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A505BCA207B499A00EB007F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A9EC45C2047BA460037C6BE /* FirebasePratice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebasePratice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9EC45F2047BA460037C6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A9EC4642047BA460037C6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,12 +49,7 @@
 		7A9EC48D2047BCB30037C6BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A9EC48F2047C6DE0037C6BE /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		7A9EC4912047CABB0037C6BE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		7A9EC4932047CC320037C6BE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		7A9EC4952047CE2A0037C6BE /* ChatGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGroupViewController.swift; sourceTree = "<group>"; };
-		7A9EC4972047D5DF0037C6BE /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
-		7A9EC4992047D63D0037C6BE /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		7A9EC49B2047E2020037C6BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7A9EC49D2047E64F0037C6BE /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		B08593A92A794F5F3C1D0D29 /* Pods_FirebasePratice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebasePratice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8A7C1F7078068B4898F31D /* Pods-FirebasePratice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebasePratice.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebasePratice/Pods-FirebasePratice.release.xcconfig"; sourceTree = "<group>"; };
 		D339D1261278E850E357C5DA /* Pods-FirebasePratice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebasePratice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebasePratice/Pods-FirebasePratice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,20 +121,16 @@
 		7A9EC45E2047BA460037C6BE /* FirebasePratice */ = {
 			isa = PBXGroup;
 			children = (
-				7A9EC49D2047E64F0037C6BE /* ChatMessageCell.swift */,
 				7A9EC48F2047C6DE0037C6BE /* FirebaseDataService.swift */,
 				7A9EC4912047CABB0037C6BE /* Model.swift */,
 				7A9EC45F2047BA460037C6BE /* AppDelegate.swift */,
 				7A9EC49B2047E2020037C6BE /* ViewController.swift */,
-				7A9EC4992047D63D0037C6BE /* ChatRoomViewController.swift */,
-				7A9EC4932047CC320037C6BE /* SignInViewController.swift */,
-				7A9EC4952047CE2A0037C6BE /* ChatGroupViewController.swift */,
-				7A9EC4972047D5DF0037C6BE /* UserListViewController.swift */,
 				7A9EC4632047BA460037C6BE /* Main.storyboard */,
 				7A9EC4662047BA460037C6BE /* Assets.xcassets */,
 				7A9EC4682047BA460037C6BE /* LaunchScreen.storyboard */,
 				7A9EC46B2047BA460037C6BE /* Info.plist */,
 				7A9EC48D2047BCB30037C6BE /* GoogleService-Info.plist */,
+				7A505BCA207B499A00EB007F /* LoginViewController.swift */,
 			);
 			path = FirebasePratice;
 			sourceTree = "<group>";
@@ -345,14 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A9EC4982047D5DF0037C6BE /* UserListViewController.swift in Sources */,
 				7A9EC4602047BA460037C6BE /* AppDelegate.swift in Sources */,
-				7A9EC49A2047D63D0037C6BE /* ChatRoomViewController.swift in Sources */,
-				7A9EC4962047CE2A0037C6BE /* ChatGroupViewController.swift in Sources */,
 				7A9EC4902047C6DE0037C6BE /* FirebaseDataService.swift in Sources */,
-				7A9EC4942047CC320037C6BE /* SignInViewController.swift in Sources */,
-				7A9EC49E2047E64F0037C6BE /* ChatMessageCell.swift in Sources */,
 				7A9EC49C2047E2020037C6BE /* ViewController.swift in Sources */,
+				7A505BCB207B499A00EB007F /* LoginViewController.swift in Sources */,
 				7A9EC4922047CABB0037C6BE /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

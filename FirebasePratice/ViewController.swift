@@ -9,13 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        if let email = emailTextField.text {
+            if let password = passwordTextField.text {
+                FirebaseDataService.instance.signIn(withEmail: email, password: password) {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+  
+    @IBAction func forgotButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
