@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="2097" y="-990"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="kYD-Mg-7JU">
             <objects>
-                <viewController id="Sr8-6Y-pPO" customClass="ViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Sr8-6Y-pPO" customClass="LoginViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ih-Qa-MDK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
                                                                 </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -160,17 +160,19 @@
             </objects>
             <point key="canvasLocation" x="2852" y="-990"/>
         </scene>
-        <!--Login View Controller-->
+        <!--마이페이지-->
         <scene sceneID="QuB-lf-yim">
             <objects>
-                <viewController id="scJ-9B-JKr" customClass="LoginViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="scJ-9B-JKr" customClass="MainViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r8y-HW-F5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="G1K-im-h1F"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RRB-U8-veP"/>
+                    <navigationItem key="navigationItem" title="마이페이지" id="mcc-hQ-EbP">
+                        <barButtonItem key="rightBarButtonItem" title="로그아웃" id="1C3-xa-a3b"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Sr8-6Y-pPO" kind="presentation" identifier="loginSegue" id="cEk-2m-qhW"/>
                     </connections>
