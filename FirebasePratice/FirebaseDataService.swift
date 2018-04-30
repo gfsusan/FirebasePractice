@@ -18,8 +18,8 @@ class FirebaseDataService {
     // user : 특정 사용자
     let userRef = baseRef.child("user")
     
-    // group : 채팅방 하나 단위
-    let groupRef = baseRef.child("group")
+    // feed : 피드 하나 단위
+    let feedRef = baseRef.child("feed")
     
     // message : 채팅 말풍선 하나 단위
     let messageRef = baseRef.child("message")

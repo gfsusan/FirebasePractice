@@ -163,23 +163,93 @@
         <!--마이페이지-->
         <scene sceneID="QuB-lf-yim">
             <objects>
-                <viewController id="scJ-9B-JKr" customClass="MainViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="scJ-9B-JKr" customClass="MyPageViewController" customModule="FirebasePratice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r8y-HW-F5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wAM-Ad-QaJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myFeedCell" rowHeight="173" id="PZK-p4-LTv" customClass="MyPageTableViewCell" customModule="FirebasePratice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="173"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PZK-p4-LTv" id="zLh-1a-QCA" customClass="MyPageTableViewCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-Mx-vXV">
+                                                    <rect key="frame" x="16" y="16" width="343" height="140.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tf-Cw-GBc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qub-8l-EPA">
+                                                            <rect key="frame" x="0.0" y="40" width="0.0" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDK-GE-nHp">
+                                                            <rect key="frame" x="0.0" y="80" width="38.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thought" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joj-Mf-BtI">
+                                                            <rect key="frame" x="0.0" y="120" width="60.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dzF-Mx-vXV" firstAttribute="leading" secondItem="zLh-1a-QCA" secondAttribute="leading" constant="16" id="02U-hG-eGu"/>
+                                                <constraint firstAttribute="bottom" secondItem="dzF-Mx-vXV" secondAttribute="bottom" constant="16" id="CJ2-Ey-0ZT"/>
+                                                <constraint firstItem="dzF-Mx-vXV" firstAttribute="top" secondItem="zLh-1a-QCA" secondAttribute="top" constant="16" id="Fip-rJ-Gb8"/>
+                                                <constraint firstAttribute="trailing" secondItem="dzF-Mx-vXV" secondAttribute="trailing" constant="16" id="oNJ-dx-nw5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lineLabel" destination="qub-8l-EPA" id="wou-CB-cff"/>
+                                            <outlet property="pageLabel" destination="tDK-GE-nHp" id="7Ce-82-SJW"/>
+                                            <outlet property="thoughtLabel" destination="joj-Mf-BtI" id="Zpt-7r-3qe"/>
+                                            <outlet property="titleLabel" destination="7Tf-Cw-GBc" id="1ib-H2-ANa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="scJ-9B-JKr" id="V0z-ix-9YK"/>
+                                    <outlet property="delegate" destination="scJ-9B-JKr" id="T3d-ak-MDF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wAM-Ad-QaJ" firstAttribute="leading" secondItem="G1K-im-h1F" secondAttribute="leading" id="8hd-aA-OIR"/>
+                            <constraint firstItem="G1K-im-h1F" firstAttribute="bottom" secondItem="wAM-Ad-QaJ" secondAttribute="bottom" id="VN1-jH-8ld"/>
+                            <constraint firstItem="G1K-im-h1F" firstAttribute="trailing" secondItem="wAM-Ad-QaJ" secondAttribute="trailing" id="Wpo-D4-fFh"/>
+                            <constraint firstItem="wAM-Ad-QaJ" firstAttribute="top" secondItem="G1K-im-h1F" secondAttribute="top" id="vfZ-KP-iCG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G1K-im-h1F"/>
                     </view>
                     <navigationItem key="navigationItem" title="마이페이지" id="mcc-hQ-EbP">
                         <barButtonItem key="rightBarButtonItem" title="로그아웃" id="1C3-xa-a3b"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableview" destination="wAM-Ad-QaJ" id="h5Y-jo-N1B"/>
                         <segue destination="Sr8-6Y-pPO" kind="presentation" identifier="loginSegue" id="cEk-2m-qhW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqN-Up-ZkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="-258"/>
+            <point key="canvasLocation" x="2096.8000000000002" y="-258.62068965517244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="36r-gf-9KU">

@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
+        FirebaseDataService.instance.signIn(withEmail: "myemail@naver.com", password: "123456") {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {

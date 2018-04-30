@@ -8,6 +8,7 @@
 
 import Foundation
 
+let dataCenter = DataCenter()
 
 class DataCenter {
     var feeds:[Feed] = []
