@@ -21,8 +21,8 @@ class FirebaseDataService {
     // feed : 피드 하나 단위
     let feedRef = baseRef.child("feed")
     
-    // message : 채팅 말풍선 하나 단위
-    let messageRef = baseRef.child("message")
+    // book : 책 하나 단위
+    let bookRef = baseRef.child("book")
     
     // 현재 접속중인 유저의 uid
     var currentUserUid: String? {

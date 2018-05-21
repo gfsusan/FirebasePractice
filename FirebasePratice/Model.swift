@@ -80,6 +80,8 @@ class Feed: NSObject, NSCoding {
     
     //MARK: Properties
     let book:Book
+    var bookUid: String?
+    var userUid: String?
     var line:String
     var thought:String
     var page:Int

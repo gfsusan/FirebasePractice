@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MyPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var feeds:[Feed] = []
@@ -64,24 +65,36 @@ class MyPageViewController: UIViewController, UITableViewDataSource, UITableView
 
     func fetchFeeds() {
         print("fetch feeds")
-        if let uid = FirebaseDataService.instance.currentUserUid {
-            FirebaseDataService.instance.userRef.child(uid).child("feeds").observeSingleEvent(of: .value, with: { (snapshot) in
-                if let dict = snapshot.value as? Dictionary<String, Int> {
-                    for (key, _) in dict {
-                        FirebaseDataService.instance.feedRef.child(key).observeSingleEvent(of: .value, with: {(snapshot) in
-                            if let data = snapshot.value as? Dictionary<String, AnyObject> {
-//                                let feed = Feed(key: key, data: data)
-//                                self.feeds.append(feed)
-                                print(data)
-                                print(type(of: data))
-                                DispatchQueue.main.async(execute: {
-                                    self.tableview.reloadData()
-                                    })
-                            }
-                        })
-                    }
+        FirebaseDataService.instance.feedRef.observe(.value, with: { (snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.feeds.removeAll()
+                
+                for feeds in snapshot.children.allObjects as! [DataSnapshot] {
+                    let feedObject = feeds.value as? [String: AnyObject]
+                    let feedLine = feedObject?["line"]
+                    let feedPage = feedObject?["page"]
+                    let feedThought = feedObject?["thought"]
+                    
+                    let feedBookUid = feedObject?["bookUid"]
+                    FirebaseDataService.instance.bookRef.child(feedBookUid as! String).observeSingleEvent(of: .value, with: {(snapshot) in
+//                        let bookObject = snapshot.children.nextObject() as! DataSnapshot
+//                        let bookTitle = bookObject["title"]
+//                        let bookPublisher = bookObject["publisher"]
+//                        let bookAuthor = bookObject["author"]
+//                        let bookCoverImageURL = bookObject["coverImageURL"]
+                        
+                    
+                    })
+                    
+
+                    
+//                    let feed = Feed(book: Book(title: feedTitle as! String, coverImageURL: "dslfasdlk", publisher: "sdsdf", writer: "sdf", bookDescription: "dslkfj"), page: feedPage as! Int, line: feedLine as! String, thought: feedThought as! String)
+                    
+//                    self.feeds.append(feed)
                 }
-                })
-        }
+                self.tableview.reloadData()
+            }
+        })
     }
+
 }
